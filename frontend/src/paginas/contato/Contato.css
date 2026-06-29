@@ -1,0 +1,5 @@
+.MuiGrid-justify-content-xs-center {
+    justify-content: center;
+    display: flex;
+    margin-top: 1%;
+}

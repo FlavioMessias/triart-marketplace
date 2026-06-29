@@ -1,0 +1,200 @@
+@import url(//db.onlinewebfonts.com/c/e662339992c4abf5b43f537391bd3169?family=Candara);
+@import url('http://fonts.cdnfonts.com/css/bernadette-3');
+
+*{
+  padding: 0;
+  margin: 0;
+}
+
+h1{
+  text-align: center;
+}
+
+.mainHome{
+  display: grid;
+}
+
+.bgLogo {
+  position: absolute;
+  z-index: 1;
+  top: 40%;
+  left: 63%;
+  width: 28%;
+}
+
+.bgLogo:hover
+{
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+}
+
+.MsgEmpreendedor {
+  color: #fff;
+  position: absolute;
+  z-index: 1;
+  top: 53%;
+  left: 10%;
+  font-size: 150%;
+  text-shadow: 1px 3px 7px rgb(193 145 88);
+  font-family: cursive;
+}
+
+.borderCompras {
+  border: 13px solid #fff;
+  font-size: 236%;
+  border-radius: 52px;
+  background-color: transparent;
+  padding: 2%;
+  color: #fff;
+  position: absolute;
+  z-index: 1;
+  top: 68%;
+  left: 10%;
+  font-family: cursive;
+  transition: 0.2s transform ease-in-out;
+  will-change: transform;
+  overflow: hidden;
+}
+
+.borderCompras::after {
+  background-color: rgba(154, 154, 153, 0.578);
+  border-radius: 30px;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-100%, 0) rotate(10deg);
+  transform-origin: top left;
+  transition: 0.1s transform ease-out;
+  will-change: transform;
+  z-index: -1;
+  overflow: hidden;
+}
+.borderCompras:hover::after {
+  transform: translate(0, 0);
+}
+.borderCompras:hover {
+  border: 13px solid #000;
+  color: #fff;
+  transform: scale(1.05);
+  will-change: transform;
+}
+
+.bgHome {
+  width: 100%;
+  min-height: 100vh;
+
+}
+
+
+.bg-carousel{
+  background-color: #c19158;
+  margin-top: -1rem;
+}
+
+.carousel-wrapper {
+  width: 520px;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 5px 5px 25px 0px rgba(46, 61, 73, 0.2);
+  border-radius: 20px;
+  margin: 100px auto 20px;
+}
+
+.carousel-container {
+  width: 400px;
+  height: 250px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.carouselHome {
+  display: flex;
+  width: 1200px;
+  animation: sliding 12s infinite;
+}
+.carouselHome div {
+  width: 400px;
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+}
+.carouselHome:hover {
+  animation-play-state: paused;
+}
+.carouselHome .image-one {
+  background-image: url("https://i.imgur.com/5nNjkgD.png");
+}
+.carouselHome .image-two {
+  background-image: url("https://i.imgur.com/xg5VY1n.png");
+}
+.carouselHome .image-three {
+  background-image: url("https://i.imgur.com/bQUvlcS.png");
+}
+
+@keyframes sliding {
+  30% {
+    transform: translateX(0);
+  }
+  35% {
+    transform: translateX(-400px);
+  }
+  65% {
+    transform: translateX(-400px);
+  }
+  70% {
+    transform: translateX(-800px);
+  }
+  98% {
+    transform: translateX(-800px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@media screen and (max-width: 768px) {
+  .carousel-wrapper {
+    width: 312px;
+    height: 210px;
+  }
+
+  .carousel-container {
+    width: 240px;
+    height: 150px;
+  }
+
+  .carouselHome {
+    width: 720px;
+  }
+  .carouselHome > div {
+    width: 240px;
+    height: 150px;
+  }
+
+  @keyframes sliding {
+    30% {
+      transform: translateX(0);
+    }
+    35% {
+      transform: translateX(-240px);
+    }
+    65% {
+      transform: translateX(-240px);
+    }
+    70% {
+      transform: translateX(-480px);
+    }
+    98% {
+      transform: translateX(-480px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+}

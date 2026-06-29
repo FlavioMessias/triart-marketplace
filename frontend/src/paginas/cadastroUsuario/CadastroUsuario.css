@@ -1,0 +1,66 @@
+.imagem2 {
+    background-image: url(https://i.imgur.com/IV47v8s.png);
+    background-repeat: no-repeat;
+    flex-basis: 40%;
+    min-height: 70vh;
+    background-size: cover;
+    background-position: center;
+    width: 100vh;
+    height: 347px;
+    left: 376px;
+    top: 242px;
+}
+
+.textos2 {
+    font-weight: bold !important;
+}
+
+.btn {
+    /* margin-right: 20px !important; */
+    color: white !important;
+    border-color: white !important;
+}
+
+.botao {
+    display: flex;
+    align-items: center;
+
+}
+
+.text-decorator-none {
+    text-decoration: none !important;
+    /* margin-right: 15px; */
+}
+
+.fundo {
+    background: #C29159;
+}
+
+.fundo22 {
+    align-items: center;
+    background: #D9AD59;
+    border-radius: 36px;
+    padding: 10%;
+    width: 376px;
+    height: 442px;
+    left: 41px;
+    top: 203px;
+}
+
+.escolha {
+    color: white !important;
+}
+
+.fundo22  .MuiOutlinedInput-notchedOutline{
+    border-color: rgb(255, 255, 255) !important;
+}
+
+.fundo22 .MuiInputBase-input, .fundo22 .MuiFormLabel-root {
+    color: white !important;
+    }
+
+
+
+.fundo22 .css-i4bv87-MuiSvgIcon-root {
+    color: white;
+}

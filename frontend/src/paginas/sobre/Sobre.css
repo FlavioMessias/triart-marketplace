@@ -1,0 +1,253 @@
+body{
+    margin: 0;
+    background: lightgray;
+    text-align: center;
+    font-family: sans-serif;
+    color: #fefefe;
+}
+
+.textPlace{
+  font-family: cursive;
+  background-color: #f0f8ff63;
+  box-shadow: #0d0c0a 0px 22px 70px 4px;
+}
+
+.h1textPlace{
+  font-size: 287%;
+  font-style: italic;
+  font-family: cursive;
+  box-shadow: #0d0c0a 0px 22px 70px 4px;
+  padding: 2%;
+  color: #c19158;
+  background-color: #f0f8ff63;
+}
+
+.TextLogo{
+  display: inline-flex;
+  padding: 3%;
+}
+
+.h2nossaMissao{
+  text-align: left;
+  font-size: 250%;
+  color: #000;
+  padding-top: 5%;
+  margin: 2%;
+  color: white;
+  font-family: cursive;
+}
+
+.h6textPlace{
+  color: #000;
+  font-family: cursive;
+}
+
+.nossaMissao{
+  background-image: url(https://i.imgur.com/8gFK4Qa.jpg) ;
+  padding-top: 5%;
+  padding: 5%;
+}
+
+.textlogo{
+  padding: 20px;
+  text-align: center;
+  font-size: 260%;
+  border-radius: 40px;
+  background-color: #d9ad5985;
+  box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 3px 7px 11px 15px rgb(193 145 88 / 68%);
+  font-family: cursive;
+ 
+}
+
+.h2titleCarousel{
+  font-size: 300%;
+  font-family: cursive;
+  color: #000;
+}
+
+.logoSobre{
+  text-align: center;
+  width: auto;
+  padding: 3%;
+}
+
+.carousel-main{
+  min-height: 40vw;
+
+}
+
+.carousel div {
+    width: 300px !important; 
+}
+
+.container {
+    position: relative;
+    width: 320px;
+    margin: 5px auto 0 auto;
+    perspective: 1000px;
+  }
+
+.carousel {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d; 
+    animation: rotate360 60s infinite forwards linear;
+  }
+  .carousel__face { 
+    position: absolute;
+    height: 187px;
+    top: 20px;
+    left: 10px;
+    right: 10px;
+    background-size: cover;
+    box-shadow:inset 0 0 0 2000px rgba(0,0,0,0.5);
+    display: flex;
+  }
+  
+  span {
+    margin: auto;
+    font-size: 2rem;
+  }
+
+  .linkCarousel{
+    font-family: cursive;
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  
+  .carousel__face:nth-child(1) {
+    background-image: url("https://i.imgur.com/RJMwaKs.jpg");
+    transform: rotateY(  0deg) translateZ(430px); }
+  .carousel__face:nth-child(2) { 
+    background-image: url("https://i.imgur.com/ldPA35p.jpg");
+      transform: rotateY( 40deg) translateZ(430px); }
+  .carousel__face:nth-child(3) {
+    background-image: url("https://i.imgur.com/CNKNwJA.jpg");
+    transform: rotateY( 80deg) translateZ(430px); }
+  .carousel__face:nth-child(4) {
+    background-image: url("https://i.imgur.com/Xguz30P.jpg");
+    transform: rotateY(120deg) translateZ(430px); }
+  .carousel__face:nth-child(5) { 
+    background-image: url("https://i.imgur.com/PCp6tpI.jpg");
+   transform: rotateY(160deg) translateZ(430px); }
+  .carousel__face:nth-child(6) { 
+    background-image: url("https://i.imgur.com/z6Wku2p.jpg");
+   transform: rotateY(200deg) translateZ(430px); }
+  .carousel__face:nth-child(7) { 
+    background-image: url("https://i.imgur.com/CiGJJKt.jpg");
+   transform: rotateY(240deg) translateZ(430px); }
+  .carousel__face:nth-child(8) {
+    background-image: url("https://i.imgur.com/7dy5H1y.jpg");
+    transform: rotateY(280deg) translateZ(430px); }
+  .carousel__face:nth-child(9) {
+    background-image: url("https://i.imgur.com/O9IRx5O.jpg");
+    transform: rotateY(320deg) translateZ(430px); }
+  
+  
+  
+  @keyframes rotate360 {
+    from {
+      transform: rotateY(0deg);
+    }
+    to {
+      transform: rotateY(-360deg);
+    }
+  }
+  
+  @media screen and (max-width: 890px){
+    .carousel-main{
+      display: none;
+    }
+    .textPlace{
+      display: none;
+    }
+  }
+
+
+  /* ADICIONANDO CARDS DE CURSOS */
+
+
+  .cardCursos{
+    background: #f5f7f8;
+    font-family: 'Roboto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    padding: 20px 0;
+  }
+
+  .band {
+    width: 90%;
+    max-width: 1240px;
+    margin: 0 auto;
+    
+    display: inline-flex;
+    
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-gap: 20px;
+    
+  }
+
+  @media only screen and (min-width: 500px) {
+    .band {
+      grid-template-columns: 1fr 1fr;
+    }
+    
+  }
+  
+  @media only screen and (min-width: 850px) {
+    .band {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+
+  .card {
+    background: white;
+    text-decoration: none;
+    color: #444;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    
+    position: relative;
+    top: 0;
+    transition: all .1s ease-in;
+  }
+  .card:hover {
+    top: -2px;
+     box-shadow: 0 4px 5px rgba(0,0,0,0.2);
+  }
+
+  .articleCard {
+    padding: 20px;
+    flex: 1;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+    /* typography CARD */
+
+    .h1Card {
+      font-size: 20px;
+      margin: 0;
+      color: #333
+    }
+
+    .pCard{
+      flex: 1;
+      line-height: 1.4;
+    }
+
+    .thumb {
+      padding-bottom: 60%;
+      background-size: cover;
+      position: center center;
+      
+    }
+
+
+

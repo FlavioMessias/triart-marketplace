@@ -1,0 +1,64 @@
+.box1 {
+    background-color: #c19158;
+    height: 120px;
+    
+}
+
+.box2 {
+    background-color: #c19158; 
+    height: 60px
+}
+
+.redes {
+    font-size:50px !important;
+    color: white;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border-radius: 50%;
+    outline: 3px solid #fff;
+    transition-property:
+        outline-offset, outline-color,
+        background-color;
+    transition-duration: .25s;
+
+     
+}
+
+.iconsRedes {
+    column-gap: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.redes:hover {
+    outline-offset: 4px;
+    animation: shake .25s;
+}
+
+.instagram:hover {
+    background-image: radial-gradient(circle at 30% 107%,
+    #fdf497 0%, #fdf497 5%,
+    #fd5949 45%, #d6249f 60%,
+    #285AEB 90%);
+outline-color: #e944ac;
+}
+
+.github:hover {
+    background-color: #000;
+    outline-color: #000;
+}
+
+.textos {
+    color: white;
+    font-family: 'Carrois Gothic SC', sans-serif !important;
+    font-size: 20px !important;
+    font-weight: bold !important;
+}
+
+.cr {
+    font-family: 'Carrois Gothic SC', sans-serif !important;
+    font-size: 15px !important;
+    font-weight: bold !important;
+    color: white;
+
+}  

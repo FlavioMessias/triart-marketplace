@@ -1,0 +1,50 @@
+.listaCards {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 65px 0px;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .titleDescription {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .productDescription {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .cardActions {
+    display: block !important;
+    margin-bottom: 25px !important;
+  }
+
+  .container-card {
+    width: 20%;
+    height: 600px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  }
+
+.btn-lista {
+  margin-bottom: 25px;
+}
+
+  @media screen and (max-width: 850px){
+    .container-card {
+      width: 30%;
+    }
+  }
+
+  @media screen and (max-width: 450px){
+    .container-card {
+      width: 80%;
+    }
+  }
