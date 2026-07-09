@@ -2,7 +2,6 @@ package com.triart.model;
 
 import java.util.List;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -26,7 +25,7 @@ public class Categoria {
 	@Size(min = 3, max = 100, message = "O atributo tipo deve ter entre 3 e 100 caracteres")
 	private String tipo;
 
-	@OneToMany(mappedBy = "categoria", cascade = CascadeType.ALL)
+	@OneToMany(mappedBy = "categoria")
 	@JsonIgnoreProperties("categoria")
 	private List<Produto> produtos;
 	
