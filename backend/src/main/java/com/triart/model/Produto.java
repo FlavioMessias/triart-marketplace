@@ -1,6 +1,5 @@
 package com.triart.model;
 
-
 import java.math.BigDecimal;
 
 import javax.persistence.Entity;
@@ -12,6 +11,7 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Positive;
+import javax.validation.constraints.PositiveOrZero;
 import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
@@ -25,28 +25,29 @@ public class Produto {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	@NotBlank
-	@Size(min=3, max=100)
+	@NotBlank(message = "O atributo nome é obrigatório!")
+	@Size(min = 3, max = 100, message = "O atributo nome deve ter entre 3 e 100 caracteres")
 	private String nome;
 	
-	@NotBlank
-	@Size(min=10, max=1000)
+	@NotBlank(message = "O atributo descrição é obrigatório!")
+	@Size(min = 10, max = 1000, message = "O atributo descrição deve ter entre 10 e 1000 caracteres")
 	private String descricao;
 	
-	@NotNull
-	private int quantidade;
+	@NotNull(message = "O atributo quantidade é obrigatório!")
+	@PositiveOrZero(message = "O atributo quantidade não pode ser negativo!")
+	private Integer quantidade;
 	
 	@JsonFormat(shape = JsonFormat.Shape.STRING)
-	@NotNull
-	@Positive
+	@NotNull(message = "O atributo preço é obrigatório!")
+	@Positive(message = "O atributo preço deve ser maior que zero!")
 	private BigDecimal preco;
 	
 	@ManyToOne
-	@JsonIgnoreProperties("produto")
+	@JsonIgnoreProperties("produtos")
 	private Categoria categoria;
 	
 	@ManyToOne
-	@JsonIgnoreProperties("produto")
+	@JsonIgnoreProperties("produtos")
 	private Usuario usuario;
 	
 	public Long getId() {
@@ -73,11 +74,11 @@ public class Produto {
 		this.descricao = descricao;
 	}
 
-	public int getQuantidade() {
+	public Integer getQuantidade() {
 		return quantidade;
 	}
 
-	public void setQuantidade(int quantidade) {
+	public void setQuantidade(Integer quantidade) {
 		this.quantidade = quantidade;
 	}
 
@@ -105,6 +106,4 @@ public class Produto {
 		this.usuario = usuario;
 	}
 
-	
-	
-}
+}	
