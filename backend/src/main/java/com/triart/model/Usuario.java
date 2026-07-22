@@ -29,10 +29,11 @@ public class Usuario {
 
 	@NotBlank(message = "O atributo usuário é obrigatório!")
 	@Email(message = "O atributo usuário deve ser um email válido!")
+	@Size(max = 255, message = "O atributo usuário deve ter no máximo 255 caracteres")
 	private String usuario;
 
 	@NotBlank(message = "O atributo senha é obrigatório!")
-	@Size(min = 8, message = "A senha deve ter no mínimo 8 caracteres")
+	@Size(min = 8, max = 255, message = "O atributo senha deve ter entre 8 e 255 caracteres")
 	private String senha;
 
 	@Size(max = 5000, message = "O link da foto não pode ser maior do que 5000 caracteres")
